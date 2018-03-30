@@ -1,0 +1,9 @@
+必须插件：
+sudo apt-get install libmysqlclient-dev
+
+
+编译命令：
+gcc -o a test.c   -I/usr/include/mysql -L/usr/lib/mysql -lmysqlclient -lz
+或者   gcc -o ConnDB $(mysql_config --include) ConnDB.c $(mysql_config --libs)
+可以使用mysql_config --libs 查到 -L/usr/lib/mysql ........等路径
+通用也可以使用mysql_config --include 查到 -I/usr/include/mysql...等路径
